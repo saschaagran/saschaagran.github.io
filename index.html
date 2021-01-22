@@ -29,10 +29,13 @@
         text-decoration: none;
       }
 
+      a:hover {
+        color: gold;
+      }
+
       hr {
         margin-top: -1em;
       }
-
 
       .skill-list {
         display: grid;
@@ -49,10 +52,16 @@
         font-style: italic;
       }
 
+      .contact-image {
+        max-width: 1em;
+        max-height: 1em;
+        padding-right: 5px;
+      }
+
       .contact-info {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
       @media only screen and (prefers-color-scheme: dark) {
@@ -76,6 +85,9 @@
         body {
           margin: none;
           max-width: none;
+          background: #ffffff;
+          color: #000000;
+          font-size: 12pt;
         }
       }
     </style>
@@ -85,12 +97,62 @@
     <h1>Sascha Agran</h1>
 
     <div class="contact-info">
-      <span>Portland, OR</span>
-      <a href="mailto:sascha.agran@gmail.com">sascha.agran@gmail.com</a><br />
-      <a href="tel:+1-215-584-5915">(215) 584-5915</a><br />
-      <a href="https://www.linkedin.com/in/sascha-agran/" target="_blank"
-        >linkedin.com/in/sascha-agran</a
-      ><br />
+      <span
+        ><picture>
+          <source
+            srcset="Assets/Images/Globe-256-dark.png"
+            media="(prefers-color-scheme: dark)" />
+          <source
+            srcset="Assets/Images/Globe-256.png"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+          <img
+            class="contact-image"
+            src="Assets/Images/Globe-256.png" /></picture
+        >Portland, OR</span
+      >
+      <span
+        ><picture>
+          <source
+            srcset="Assets/Images/Message-Mail-256-dark.png"
+            media="(prefers-color-scheme: dark)" />
+          <source
+            srcset="Assets/Images/Message-Mail-256.png"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+          <img
+            class="contact-image"
+            src="Assets/Images/Message-Mail-256.png" /></picture
+        ><a href="mailto:sascha.agran@gmail.com"
+          >sascha.agran@gmail.com</a
+        ></span
+      >
+      <span
+        ><picture>
+          <source
+            srcset="Assets/Images/Telephone-256-dark.png"
+            media="(prefers-color-scheme: dark)" />
+          <source
+            srcset="Assets/Images/Telephone-256.png"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+          <img
+            class="contact-image"
+            src="Assets/Images/Telephone-256.png" /></picture
+        ><a href="tel:+1-215-584-5915">215.584.5915</a></span
+      >
+      <span
+        ><picture>
+          <source
+            srcset="Assets/Images/LinkedIn-256-dark.png"
+            media="(prefers-color-scheme: dark)" />
+          <source
+            srcset="Assets/Images/LinkedIn-256.png"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+          <img
+            class="contact-image"
+            src="Assets/Images/LinkedIn-256.png" /></picture
+        ><a href="https://www.linkedin.com/in/sascha-agran/" target="_blank"
+          >linkedin.com/in/sascha-agran</a
+        ></span
+      >
     </div>
 
     <div class="about-me">
@@ -113,6 +175,7 @@
       <span class="years">2020-2021</span><br />
       <ul>
         <li>Implement automated iOS tests in Swift using XCTest</li>
+        <li>Improved test execution speed by 40-45% per test</li>
         <li>
           Increase automated test modularity by extending and refactoring
           existing Page Object Model framework
@@ -204,11 +267,11 @@
     </div>
 
     <div class="education">
-        <h3>Education</h3>
-        <hr />
-        <span class="school">University of Puget Sound</span><br />
-        <span class="degree">Bachelor of Music</span>
-        <span class="years">2010-2014</span>
-      </div>
+      <h3>Education</h3>
+      <hr />
+      <span class="school">University of Puget Sound</span><br />
+      <span class="degree">Bachelor of Music</span>
+      <span class="years">2010-2014</span>
+    </div>
   </body>
 </html>
