@@ -7,14 +7,14 @@
     <title>Sascha Agran</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Spartan&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Spartan:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <style>
       body {
         font-family: "Roboto", sans-serif;
         margin: auto;
-        max-width: 600px;
+        max-width: 625px;
         padding: 4em;
       }
 
@@ -22,6 +22,19 @@
       h3,
       .title {
         font-family: "Spartan", sans-serif;
+      }
+
+      h1 {
+        font-weight: 500;
+      }
+
+      h3 {
+        font-weight: 700;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 1.05em;
       }
 
       a {
@@ -50,6 +63,7 @@
       .company,
       .years {
         font-style: italic;
+        font-size: 0.9em;
       }
 
       .contact-image {
@@ -81,6 +95,12 @@
         }
       }
 
+      @media only screen and (max-width: 624px;) {
+        body {
+          margin: 1em auto;
+        }
+      }
+
       @media only print {
         body {
           margin: none;
@@ -88,6 +108,11 @@
           background: #ffffff;
           color: #000000;
           font-size: 12pt;
+        }
+
+        header,
+        footer {
+          display: none;
         }
       }
     </style>
@@ -117,7 +142,7 @@
             media="(prefers-color-scheme: dark)" />
           <source
             srcset="Assets/Images/Message-Mail-256.png"
-            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference), print" />
           <img
             class="contact-image"
             src="Assets/Images/Message-Mail-256.png" /></picture
